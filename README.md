@@ -34,11 +34,11 @@ npm run dev                   # starts on http://localhost:8000
 
 **Test accounts after seeding:**
 
-| Role   | Email                        | Password   | Can log in? |
-|--------|------------------------------|------------|-------------|
-| Admin  | alicia.reyes@javier.dev      | Alicia123! | ✅          |
-| Editor | bianca.cruz@javier.dev       | Bianca123! | ❌ inactive |
-| Viewer | marco.santos@javier.dev      | Marco123!  | ❌ blocked  |
+| Role   | Email                        |     Password     | Can log in? |
+|--------|------------------------------|------------------|-------------|
+| Admin  | adminrjavier@javier.dev      | AdminRjavier123! |     ✅      |
+| Editor | zara.mendoza@javier.dev      | Zara123!         | ❌ inactive |
+| Viewer | leo.vargas@javier.dev        | Leo123!          | ❌ blocked  |
 
 ---
 
