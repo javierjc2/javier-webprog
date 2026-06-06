@@ -11,9 +11,9 @@ const User     = require('./models/User');
 const Article  = require('./models/Article');
 
 const users = [
-    { firstName: 'Alicia',  lastName: 'Reyes',   age: '29', gender: 'female', contactNumber: '09171234567', email: 'alicia.reyes@javier.dev',   role: 'admin',  username: 'aliciareyes',   password: 'Alicia123!',  address: 'Sampaloc, Manila, Metro Manila',  isActive: true  },
-    { firstName: 'Marco',   lastName: 'Santos',  age: '31', gender: 'male',   contactNumber: '09182345678', email: 'marco.santos@javier.dev',   role: 'viewer', username: 'marcosantos',   password: 'Marco123!',   address: 'Tondo, Manila, Metro Manila',     isActive: true  },
-    { firstName: 'Bianca',  lastName: 'Cruz',    age: '26', gender: 'female', contactNumber: '09193456789', email: 'bianca.cruz@javier.dev',    role: 'editor', username: 'biancacruz',    password: 'Bianca123!',  address: 'Quezon City, Metro Manila',       isActive: false },
+    { firstName: 'Admin',  lastName: 'Rjavier', age: '29', gender: 'female', contactNumber: '09171234567', email: 'adminrjavier@javier.dev', role: 'admin', username: 'adminrjavier', password: 'AdminRjavier123!', address: 'Sampaloc, Manila, Metro Manila', isActive: true },
+    { firstName: 'Leo',    lastName: 'Vargas',  age: '31', gender: 'male',   contactNumber: '09182345678', email: 'leo.vargas@javier.dev',     role: 'viewer', username: 'leovargas',    password: 'Leo123!',        address: 'Tondo, Manila, Metro Manila',     isActive: true },
+    { firstName: 'Zara',   lastName: 'Mendoza', age: '26', gender: 'female', contactNumber: '09193456789', email: 'zara.mendoza@javier.dev',  role: 'editor', username: 'zaramendoza', password: 'Zara123!',       address: 'Quezon City, Metro Manila',       isActive: false },
     { firstName: 'Nathan',  lastName: 'Diaz',    age: '34', gender: 'male',   contactNumber: '09214567890', email: 'nathan.diaz@javier.dev',    role: 'viewer', username: 'nathandiaz',    password: 'Nathan123!',  address: 'Pasig City, Metro Manila',        isActive: true  },
     { firstName: 'Jasmine', lastName: 'Garcia',  age: '28', gender: 'female', contactNumber: '09225678901', email: 'jasmine.garcia@javier.dev', role: 'editor', username: 'jasminegarcia', password: 'Jasmine123!', address: 'Makati City, Metro Manila',       isActive: false },
     { firstName: 'Ethan',   lastName: 'Lopez',   age: '33', gender: 'male',   contactNumber: '09236789012', email: 'ethan.lopez@javier.dev',    role: 'viewer', username: 'ethanlopez',    password: 'Ethan123!',   address: 'Taguig City, Metro Manila',       isActive: true  },
@@ -51,9 +51,9 @@ const seed = async () => {
         console.log(`✅ Seeded ${articles.length} articles`);
 
         console.log('\nSeed complete. You can now log in with:');
-        console.log('  Admin  → alicia.reyes@javier.dev / Alicia123!');
-        console.log('  Editor → bianca.cruz@javier.dev  / Bianca123! (inactive)');
-        console.log('  Viewer → marco.santos@javier.dev / Marco123!  (login blocked)\n');
+        console.log('  Admin  → adminrjavier@javier.dev / AdminRjavier123!');
+        console.log('  Editor → zara.mendoza@javier.dev  / Zara123! (inactive)');
+        console.log('  Viewer → leo.vargas@javier.dev / Leo123!');
 
         process.exit(0);
     } catch (err) {

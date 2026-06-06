@@ -24,7 +24,7 @@ const SignInPage = () => {
             localStorage.setItem('firstName', data.firstName);
             localStorage.setItem('type',      data.type);
             localStorage.setItem('userId',    data.userId);
-            navigate('/dashboard');
+            navigate(data.type === 'viewer' ? '/' : '/dashboard');
         } catch (err) {
             setError(err.response?.data?.message || 'Login failed. Please try again.');
         } finally {
@@ -97,9 +97,9 @@ const SignInPage = () => {
                 </div>
 
                 <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-xs text-zinc-400 space-y-1">
-                    <p><span className="text-zinc-300 font-semibold">Admin:</span> alicia.reyes@javier.dev / Alicia123!</p>
-                    <p><span className="text-zinc-300 font-semibold">Editor:</span> bianca.cruz@javier.dev / Bianca123! <span className="text-red-400">(inactive)</span></p>
-                    <p className="text-zinc-600">Viewer accounts are blocked from login.</p>
+                    <p><span className="text-zinc-300 font-semibold">Admin:</span> adminrjavier@javier.dev / AdminRjavier123!</p>
+                    <p><span className="text-zinc-300 font-semibold">Editor:</span> zara.mendoza@javier.dev / Zara123! <span className="text-red-400">(inactive)</span></p>
+                    <p><span className="text-zinc-300 font-semibold">Viewer:</span> leo.vargas@javier.dev / Leo123!</p>
                 </div>
 
             </form>

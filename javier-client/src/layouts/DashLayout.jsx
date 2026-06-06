@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { styled, useTheme, alpha } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
@@ -163,6 +163,10 @@ const DashLayout = () => {
         localStorage.clear();
         navigate("/");
     };
+
+    if (storedType === "viewer") {
+        return <Navigate to="/" replace />;
+    }
 
     // Enhancement 1: Filter nav items — editors cannot see Users
     const visibleNavItems = dashboardNavItems.filter(({ to }) => {
