@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 
 import { Gauge } from '@mui/x-charts/Gauge';
 import { Typography, Card, CardContent, Button } from '@mui/material';
+import { useTheme as useMuiTheme } from '@mui/material/styles';
 import { PieChart } from '@mui/x-charts/PieChart';
 
 import { Marker, MapContainer, TileLayer, Popup } from 'react-leaflet';
@@ -61,6 +62,7 @@ const rows = [
 
 function DashboardPage() {
     const Location = useLocation();
+    const muiTheme = useMuiTheme();
 
     return (
         <Box
@@ -78,7 +80,7 @@ function DashboardPage() {
                     gutterBottom
                     sx={{
                         fontWeight: 700,
-                        color: '#111827',
+                        color: muiTheme.palette.text.primary,
                         mb: 1,
                         fontSize: {
                             xs: '1.8rem',
@@ -101,12 +103,14 @@ function DashboardPage() {
                     sx={{
                         flex: 1,
                         minWidth: 0,
-                        borderRadius: 4,
-                        border: '1px solid #e5e7eb',
+                        borderRadius: 2,
+                        backgroundColor: muiTheme.palette.background.paper,
+                        border: `1px solid ${muiTheme.palette.divider}`,
                         boxShadow: 'none',
                         transition: '0.2s ease',
                         '&:hover': {
-                            borderColor: '#d1d5db',
+                            borderColor: muiTheme.palette.primary.main,
+                            backgroundColor: 'rgba(139, 92, 246, 0.05)',
                             transform: 'translateY(-2px)',
                         },
                     }}
@@ -116,7 +120,7 @@ function DashboardPage() {
                         <Typography
                             variant="body2"
                             sx={{
-                                color: '#6b7280',
+                                color: muiTheme.palette.text.secondary,
                                 mb: 1,
                                 letterSpacing: 0.5,
                             }}
@@ -127,7 +131,7 @@ function DashboardPage() {
                         <Typography
                             sx={{
                                 fontWeight: 700,
-                                color: '#111827',
+                                color: muiTheme.palette.text.primary,
                                 fontSize: {
                                     xs: '2rem',
                                     sm: '2.5rem',
@@ -144,12 +148,14 @@ function DashboardPage() {
                     sx={{
                         flex: 1,
                         minWidth: 0,
-                        borderRadius: 4,
-                        border: '1px solid #e5e7eb',
+                        borderRadius: 2,
+                        backgroundColor: muiTheme.palette.background.paper,
+                        border: `1px solid ${muiTheme.palette.divider}`,
                         boxShadow: 'none',
                         transition: '0.2s ease',
                         '&:hover': {
-                            borderColor: '#d1d5db',
+                            borderColor: muiTheme.palette.primary.main,
+                            backgroundColor: 'rgba(139, 92, 246, 0.05)',
                             transform: 'translateY(-2px)',
                         },
                     }}
@@ -159,7 +165,7 @@ function DashboardPage() {
                         <Typography
                             variant="body2"
                             sx={{
-                                color: '#6b7280',
+                                color: muiTheme.palette.text.secondary,
                                 mb: 1,
                                 letterSpacing: 0.5,
                             }}
@@ -170,7 +176,7 @@ function DashboardPage() {
                         <Typography
                             sx={{
                                 fontWeight: 700,
-                                color: '#111827',
+                                color: muiTheme.palette.text.primary,
                                 fontSize: {
                                     xs: '2rem',
                                     sm: '2.5rem',
@@ -191,9 +197,10 @@ function DashboardPage() {
             {/* Charts */}
             <Card
                 sx={{
-                    borderRadius: 4,
-                    border: '1px solid #ececec',
-                    boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+                    borderRadius: 2,
+                    backgroundColor: muiTheme.palette.background.paper,
+                    border: `1px solid ${muiTheme.palette.divider}`,
+                    boxShadow: 'none',
                     mb: 5,
                     overflow: 'hidden',
                 }}
@@ -227,7 +234,7 @@ function DashboardPage() {
                         >
 
                             <BarChart
-                                colors={['#64748b', '#cbd5e1']}
+                                colors={['#8b5cf6', '#a78bfa']}
                                 series={[
                                     { data: [35, 44, 24, 34], label: 'Series 1' },
                                     { data: [51, 6, 49, 30], label: 'Series 2' },
@@ -274,7 +281,7 @@ function DashboardPage() {
                                         ? 180
                                         : 220
                                 }
-                                colors={['#475569', '#94a3b8', '#e2e8f0']}
+                                colors={['#8b5cf6', '#a78bfa', '#c4b5fd']}
                                 series={[
                                     {
                                         innerRadius: 35,
@@ -300,9 +307,10 @@ function DashboardPage() {
             {/* DataGrid */}
             <Card
                 sx={{
-                    borderRadius: 4,
-                    border: '1px solid #ececec',
-                    boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+                    borderRadius: 2,
+                    backgroundColor: muiTheme.palette.background.paper,
+                    border: `1px solid ${muiTheme.palette.divider}`,
+                    boxShadow: 'none',
                     mb: 5,
                     overflow: 'hidden',
                 }}
@@ -313,8 +321,8 @@ function DashboardPage() {
                         sx={{
                             px: { xs: 2, sm: 3 },
                             py: 2,
-                            borderBottom: '1px solid #ececec',
-                            backgroundColor: '#fafafa',
+                            borderBottom: `1px solid ${muiTheme.palette.divider}`,
+                            backgroundColor: 'rgba(139, 92, 246, 0.05)',
                         }}
                     >
 
@@ -322,7 +330,7 @@ function DashboardPage() {
                             variant="h6"
                             sx={{
                                 fontWeight: 600,
-                                color: '#18181b',
+                                color: muiTheme.palette.text.primary,
                             }}
                         >
                             Users Overview

@@ -52,24 +52,30 @@ const HomePage = () => {
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
                     <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-                        <p className="text-2xl font-bold text-zinc-900">MERN</p>
+                        <p className="text-2xl font-bold text-zinc-900">JAVA</p>
                         <p className="mt-2 text-[9px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-                            MongoDB, Express.js, React, Node.js
+                            Object-Oriented Programming
                         </p>
                     </div>
 
                     <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
                         <p className="text-2xl font-bold text-zinc-900">FLUTTER</p>
                         <p className="mt-2 text-[9px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
-                            Dart
+                            Cross-Platform Development
                         </p>
                     </div>
 
                     <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-                        <p className="text-2xl font-bold text-zinc-900">HTML / CSS</p>
+                        <p className="text-2xl font-bold text-zinc-900">HTML</p>
+                        <p className="mt-2 text-[9px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
+                            Web Markup Language
+                        </p>
                     </div>
                     <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-5">
-                        <p className="text-2xl font-bold text-zinc-900">JAVASCRIPT</p>
+                        <p className="text-2xl font-bold text-zinc-900">CSS</p>
+                        <p className="mt-2 text-[9px] font-semibold uppercase tracking-[0.24em] text-zinc-500">
+                            Styling & Design
+                        </p>
                     </div>
                 </div>
             </section>
@@ -89,22 +95,21 @@ const HomePage = () => {
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
                         <div className="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] bg-zinc-200">
                             <img
-                                src="src/assets/img/Simple Product Catalog.png"
+                                src="src/assets/img/AuditSure.png"
                                 alt="Simple Product Catalog"
                                 className="h-full w-full object-cover"
                             />
                         </div>
 
                         <h3 className="mt-4 text-lg font-semibold text-zinc-900">
-                            Product Catalog
+                            AuditSure
                         </h3>
                         <p className="mt-3 text-sm leading-6 text-zinc-600">
-                            A simple and responsive product catalog platform showcasing
-                            organized product listings, category filtering, and a clean
-                            user-friendly browsing experience.
+                            AuditSure is a document auditing and verification application designed to streamline document upload, 
+                            validation, reporting, and task management. 
                         </p>
                         <p className="mt- text-sm leading-12 text-zinc-600">
-                            Build using HTML, CSS, and Javascript
+                            Build using Flutter and HTML
                         </p>
                         <Button className="mt-1" variant="primary">
                             View More
@@ -114,17 +119,17 @@ const HomePage = () => {
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
                         <div className="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] bg-zinc-200">
                             <img
-                                src="src/assets/img/Bull Ex Mobile App.png"
+                                src="src/assets/img/Social Media Flutter.png"
                                 alt="Simple Product Catalog"
                                 className="h-full w-full object-cover"
                             />
                         </div>
                         <h3 className="mt-4 text-lg font-semibold text-zinc-900">
-                            Bull Ex Mobile Application
+                            Socialize
                         </h3>
                         <p className="mt-3 text-sm leading-6 text-zinc-600">
-                            E-Commerce Mobile Application designed to deliver a smooth and seamless shopping experience with easy navigation,
-                            user-friendly interfaces, and cart management.
+                            A sleek, cross-platform social media app built with Flutter. Connect seamlessly, 
+                            share moments, and experience a smooth, modern UI designed for the next generation of social networking.
                         </p>
                         <p className="mt- text-sm leading-12 text-zinc-600">
                             Build using Flutter

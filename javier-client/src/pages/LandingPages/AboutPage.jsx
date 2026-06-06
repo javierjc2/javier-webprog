@@ -43,37 +43,37 @@ const AboutPage = () => {
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     <div className=" rounded-3xl border-2 border-zinc-900 bg-zinc-100
                      p-5">
-                        <p className="text-2xl font-bold text-zinc-900">03</p>
+                        <p className="text-2xl font-bold text-zinc-900">05+</p>
                         <p className="mt-2 text-[11px] font-semibold uppercase 
                          tracking[0.24em] text-zinc-500">
-                            Years Learning IT
+                            Languages Mastered
                         </p>
                     </div>
 
                     <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 
                     p-5">
-                        <p className="text-2xl font-bold text-zinc-900">Web & Mobile</p>
+                        <p className="text-2xl font-bold text-zinc-900">Full Stack</p>
                         <p className="mt-2 text-[11px] font-semibold uppercase
                             tracking-[0.24em] text-zinc-500">
-                            Development Scope
+                            Development Expert
                         </p>
                     </div>
 
                     <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100
                     p-5">
-                        <p className="text-2xl font-bold text-zinc-900">09</p>
+                        <p className="text-2xl font-bold text-zinc-900">15+</p>
                         <p className="mt-2 text-[11px] font-semibold uppercase
                             tracking-[0.24em] text-zinc-500">
-                            Projects Built
+                            Solutions Delivered
                         </p>
                     </div>
 
                     <div className="rounded-3xl border-2 border-zinc-900 bg-zinc-100
                         p-5">
-                        <p className="text-2xl font-bold text-zinc-900">Tools</p>
+                        <p className="text-2xl font-bold text-zinc-900">IDE & VCS</p>
                         <p className="mt-2 text-[11px] font-semibold uppercase
                                 tracking-[0.24em] text-zinc-500">
-                            Git, Figma, and Canva
+                            VS Code, Git, GitHub
                         </p>
                     </div>
                 </div>
@@ -105,13 +105,13 @@ const AboutPage = () => {
                                     Experience Block
                                 </h3>
                                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                                    • Developed responsive websites using React and Tailwind CSS
+                                    • Backend development with Java and object-oriented design patterns
                                 </p>
                                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                                    • Built academic systems and modern UI interfaces
+                                    • Cross-platform mobile apps built with Flutter and Dart
                                 </p>
                                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                                    • Experienced in frontend development
+                                    • Professional frontend design using semantic HTML and CSS
                                 </p>
                             </article>
 
@@ -120,13 +120,13 @@ const AboutPage = () => {
                                     Tech Stack
                                 </h3>
                                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                                    Frontend: React, Tailwind CSS, JavaScript
+                                    Backend: Java, Object-Oriented Programming
                                 </p>
                                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                                    Backend: Node.js, Express
+                                    Mobile: Flutter, Cross-Platform Development
                                 </p>
                                 <p className="mt-3 text-sm leading-6 text-zinc-600">
-                                    Database: MongoDB, MySQL
+                                    Frontend: HTML, CSS, Styling & Design
                                 </p>
 
                                 <p className="mt-3 text-sm leading-16 text-zinc-600">
@@ -144,32 +144,32 @@ const AboutPage = () => {
                             <div className="flex aspect-square items-center justify-
                             center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/gpt.jpg"
-                                    alt="ChatGPT"
+                                    src="src/assets/img/IT2.png"
+                                    alt="IT2"
                                     className="h-full w-full object-cover"
                                 />
                             </div>
                             <div className="flex aspect-square items-center justify-
                             center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/cat.jpg"
-                                    alt="Crying Cat"
+                                    src="src/assets/img/IT1.png"
+                                    alt="IT1"
                                     className="h-full w-full object-cover"
                                 />
                             </div>
                             <div className="flex aspect-square items-center justify-
                             center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/workspace.jpg"
-                                    alt="workspace"
+                                    src="src/assets/img/IT3.png"
+                                    alt="IT3"
                                     className="h-full w-full object-cover"
                                 />
                             </div>
                             <div className="flex aspect-square items-center justify-
                             center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/quote.jpg"
-                                    alt="quote"
+                                    src="src/assets/img/IT4.png"
+                                    alt="IT4"
                                     className="h-full w-full object-cover"
                                 />
                             </div>

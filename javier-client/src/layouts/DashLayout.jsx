@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
-import { styled, useTheme, alpha } from "@mui/material/styles";
+import { styled, useTheme, alpha, createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
@@ -25,6 +25,78 @@ import AssessmentIcon from "@mui/icons-material/Assessment";
 import Button from "@mui/material/Button";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import ArticleIcon from "@mui/icons-material/Article";
+
+// Custom unified theme
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+    primary: {
+      main: "#8b5cf6", // Purple accent
+      light: "#a78bfa",
+      dark: "#7c3aed",
+    },
+    secondary: {
+      main: "#64748b", // Slate
+      light: "#94a3b8",
+      dark: "#475569",
+    },
+    background: {
+      default: "#020617",
+      paper: "#111827",
+    },
+    text: {
+      primary: "#f8fafc",
+      secondary: "#cbd5e1",
+    },
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#111827",
+          backgroundImage: "none",
+          borderBottom: "1px solid #334155",
+        },
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "#111827",
+          borderRight: "1px solid #334155",
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          "&.Mui-selected": {
+            backgroundColor: "#8b5cf6",
+            color: "#ffffff",
+            "&:hover": {
+              backgroundColor: "#7c3aed",
+            },
+          },
+          "&:hover": {
+            backgroundColor: "rgba(139, 92, 246, 0.1)",
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        outlined: {
+          borderColor: "#8b5cf6",
+          color: "#8b5cf6",
+          "&:hover": {
+            backgroundColor: "rgba(139, 92, 246, 0.1)",
+            borderColor: "#a78bfa",
+          },
+        },
+      },
+    },
+  },
+});
 
 
 
@@ -177,7 +249,7 @@ const DashLayout = () => {
     };
 
     return (
-        <>
+        <ThemeProvider theme={darkTheme}>
             <Box sx={{ display: "flex" }}>
                 <CssBaseline />
                 {/* /* App Bar*/}
@@ -247,16 +319,16 @@ const DashLayout = () => {
         my: 0.5,
 
         "&.Mui-selected": {
-            backgroundColor: "#f4f4f5",
-            color: "#111827",
+            backgroundColor: "#8b5cf6",
+            color: "#ffffff",
         },
 
         "&.Mui-selected:hover": {
-            backgroundColor: "#ededed",
+            backgroundColor: "#7c3aed",
         },
 
         "&:hover": {
-            backgroundColor: "#fafafa",
+            backgroundColor: "rgba(139, 92, 246, 0.1)",
         },
     }}
 >
@@ -286,8 +358,7 @@ const DashLayout = () => {
 
                 </Box>
             </Box>
-
-        </>
+        </ThemeProvider>
 
     );
 };

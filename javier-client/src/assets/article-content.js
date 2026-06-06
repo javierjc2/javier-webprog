@@ -1,70 +1,68 @@
 const articles = [
   {
     name: 'REACT',
-    title: 'Why My First React Project Almost Broke Me',
-    image: '/react logo.jpg',
+    title: 'Scaling React Apps for Production',
+    image: '/Why-Use-React.jpg',
     content: [
-      "The struggles, debugging sessions, and lessons I learned while building my first React application."
-
+      'Best practices and architecture decisions for scaling React applications in real-world projects.'
     ],
   },
   {
     name: 'TAILWIND CSS',
-    title: 'Building Clean UI Without Losing My Mind',
-    image: '/tailwind.jpg',
+    title: 'Designing Responsive Interfaces with Tailwind',
+    image: 'Tailwind_CSS_React.png',
     content: [
-      "How Tailwind CSS helped me create responsive and modern interfaces with cleaner and faster styling."
+      'How utility-first CSS enables faster layout building while keeping components consistent and maintainable.'
     ],
   },
   {
     name: 'DEBUGGING',
-    title: 'The Bug Disappeared the Moment I Asked for Help',
+    title: 'Debugging Distributed Systems Like a Pro',
     image: '/oh-no-woody.png',
     content: [
-      "A normal developer experience where the error magically fixed itself after explaining it to someone else."
+      'Practical techniques for tracking down issues across services, logs, and deployment environments.'
     ],
   },
   {
     name: 'WEB DEVELOPMENT',
-    title: 'Things I Wish I Knew Before Learning Web Development',
-    image: '/workspace card 4.jpg',
+    title: 'From Concept to Deployment: Web App Workflows',
+    image: '/desktopprog.png',
     content: [
-     "Important lessons and beginner mistakes I discovered throughout my coding journey."
+      'A complete web development workflow covering prototyping, testing, and launching modern applications.'
     ],
-    },
-    {
+  },
+  {
     name: ' UI/UX',
-    title: 'Why Good Spacing Makes Websites Look Professional',
-    image: '/ui card 5.jpg',
+    title: 'Crafting Interfaces That Users Trust',
+    image: '/UIdesign.jpg',
     content: [
-     "Learning how spacing, typography, and layout improved the quality of my website designs."
+      'Design patterns, accessibility tips, and layout decisions that improve usability in digital products.'
     ],
-    },
-    {
+  },
+  {
     name: 'FRONTEND',
-    title: 'Centering a Div Should Not Be This Difficult',
-    image: '/css card 6.jpg',
+    title: 'Modern Frontend Architecture Explained',
+    image: '/frontend.png',
     content: [
-     "A developer story about fighting CSS for hours just to perfectly align one single element."
+      'An overview of component-driven design, state management, and performance optimization for frontend apps.'
     ],
-    },
-    {
+  },
+  {
     name: 'WEB DESIGN',
-    title: 'How I Started Creating Modern Website Layouts',
-    image: '/wireframe card 7.jpg',
+    title: 'Building Fast, Accessible Web Experiences',
+    image: '/webaccess.webp',
     content: [
-     "My journey from simple layouts to designing cleaner and more responsive website interfaces."
+      'Key strategies for improving page speed, mobile responsiveness, and accessibility in web interfaces.'
     ],
-    },
-    {
+  },
+  {
     name: 'DEVELOPER LIFE',
-    title: 'Debugging at 2AM Builds Character',
+    title: 'The Daily Grind of Ship-Ready Code',
     image: '/debugcard.png.jpg',
     content: [
-     "ate-night coding sessions, random errors, and the strange satisfaction of finally fixing everything."
+      'Real-world developer habits, collaboration practices, and the rituals that keep teams delivering value.'
     ],
-    },
-
+  },
 ];
 
 export default articles;

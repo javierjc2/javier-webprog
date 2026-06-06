@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar, Box, Card, CardContent, Chip, Stack, Typography } from '@mui/material';
+import { useTheme as useMuiTheme } from '@mui/material/styles';
 import { DataGrid } from '@mui/x-data-grid';
 
 const userRows = [
@@ -51,36 +52,39 @@ const userColumns = [
         headerName: 'User',
         flex: 1.3,
         minWidth: 220,
-        renderCell: (params) => (
-            <Stack
-                direction="row"
-                spacing={1.5}
-                alignItems="center"
-                sx={{ height: '100%' }}
-            >
-                <Avatar
-                    sx={{
-                        width: 34,
-                        height: 34,
-                        fontSize: 14,
-                        bgcolor: '#e5e7eb',
-                        color: '#111827',
-                    }}
+        renderCell: (params) => {
+            const muiTheme = useMuiTheme();
+            return (
+                <Stack
+                    direction="row"
+                    spacing={1.5}
+                    alignItems="center"
+                    sx={{ height: '100%' }}
                 >
-                    {params.row.name.charAt(0)}
-                </Avatar>
+                    <Avatar
+                        sx={{
+                            width: 34,
+                            height: 34,
+                            fontSize: 14,
+                            bgcolor: '#8b5cf6',
+                            color: '#ffffff',
+                        }}
+                    >
+                        {params.row.name.charAt(0)}
+                    </Avatar>
 
-                <Typography
-                    sx={{
-                        fontSize: 14,
-                        fontWeight: 500,
-                        color: '#111827',
-                    }}
-                >
-                    {params.row.name}
-                </Typography>
-            </Stack>
-        ),
+                    <Typography
+                        sx={{
+                            fontSize: 14,
+                            fontWeight: 500,
+                            color: muiTheme.palette.text.primary,
+                        }}
+                    >
+                        {params.row.name}
+                    </Typography>
+                </Stack>
+            );
+        },
     },
 
     {
@@ -102,18 +106,33 @@ const userColumns = [
         headerName: 'Status',
         flex: 1,
         minWidth: 140,
-        renderCell: (params) => (
-            <Chip
-                label={params.value}
-                size="small"
-                sx={{
-                    borderRadius: 2,
-                    backgroundColor: '#f4f4f5',
-                    color: '#3f3f46',
-                    fontWeight: 500,
-                }}
-            />
-        ),
+        renderCell: (params) => {
+            const muiTheme = useMuiTheme();
+            const getStatusColor = (status) => {
+                switch (status) {
+                    case 'Active':
+                        return '#10b981';
+                    case 'Inactive':
+                        return '#ef4444';
+                    case 'Pending':
+                        return '#f59e0b';
+                    default:
+                        return '#8b5cf6';
+                }
+            };
+            return (
+                <Chip
+                    label={params.value}
+                    size="small"
+                    sx={{
+                        borderRadius: 2,
+                        backgroundColor: getStatusColor(params.value),
+                        color: '#ffffff',
+                        fontWeight: 500,
+                    }}
+                />
+            );
+        },
     },
 
     {
@@ -125,6 +144,7 @@ const userColumns = [
 ];
 
 function UsersPage() {
+    const muiTheme = useMuiTheme();
     return (
         <Box
             sx={{
@@ -139,7 +159,7 @@ function UsersPage() {
                     variant="h4"
                     sx={{
                         fontWeight: 700,
-                        color: '#111827',
+                        color: muiTheme.palette.text.primary,
                         mb: 1,
                     }}
                 >
@@ -156,16 +176,23 @@ function UsersPage() {
                 <Card
                     sx={{
                         flex: 1,
-                        borderRadius: 4,
-                        border: '1px solid #e5e7eb',
+                        borderRadius: 2,
+                        backgroundColor: muiTheme.palette.background.paper,
+                        border: `1px solid ${muiTheme.palette.divider}`,
                         boxShadow: 'none',
+                        transition: '0.2s ease',
+                        '&:hover': {
+                            borderColor: muiTheme.palette.primary.main,
+                            backgroundColor: 'rgba(139, 92, 246, 0.05)',
+                            transform: 'translateY(-2px)',
+                        },
                     }}
                 >
                     <CardContent sx={{ p: 4 }}>
                         <Typography
                             variant="body2"
                             sx={{
-                                color: '#6b7280',
+                                color: muiTheme.palette.text.secondary,
                                 mb: 1,
                             }}
                         >
@@ -178,7 +205,7 @@ function UsersPage() {
                                     xs: '2rem',
                                     sm: '2.5rem',
                                 },
-                                color: '#111827',
+                                color: muiTheme.palette.text.primary,
                             }}
                         >
                             {userRows.length}
@@ -189,9 +216,16 @@ function UsersPage() {
                 <Card
                     sx={{
                         flex: 1,
-                        borderRadius: 4,
-                        border: '1px solid #e5e7eb',
+                        borderRadius: 2,
+                        backgroundColor: muiTheme.palette.background.paper,
+                        border: `1px solid ${muiTheme.palette.divider}`,
                         boxShadow: 'none',
+                        transition: '0.2s ease',
+                        '&:hover': {
+                            borderColor: muiTheme.palette.primary.main,
+                            backgroundColor: 'rgba(139, 92, 246, 0.05)',
+                            transform: 'translateY(-2px)',
+                        },
                     }}
                 >
                     <CardContent sx={{ p: 4 }}>
@@ -199,7 +233,7 @@ function UsersPage() {
                         <Typography
                             variant="body2"
                             sx={{
-                                color: '#6b7280',
+                                color: muiTheme.palette.text.secondary,
                                 mb: 1,
                             }}
                         >
@@ -212,7 +246,7 @@ function UsersPage() {
                                     xs: '2rem',
                                     sm: '2.5rem',
                                 },
-                                color: '#111827',
+                                color: muiTheme.palette.text.primary,
                             }}
                         >
                             {
@@ -228,9 +262,10 @@ function UsersPage() {
 
             <Card
                 sx={{
-                    borderRadius: 4,
-                    border: '1px solid #ececec',
-                    boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+                    borderRadius: 2,
+                    backgroundColor: muiTheme.palette.background.paper,
+                    border: `1px solid ${muiTheme.palette.divider}`,
+                    boxShadow: 'none',
                     overflow: 'hidden',
                 }}
             >
@@ -239,8 +274,8 @@ function UsersPage() {
                         sx={{
                             px: { xs: 2, sm: 3 },
                             py: 2,
-                            borderBottom: '1px solid #ececec',
-                            backgroundColor: '#fafafa',
+                            borderBottom: `1px solid ${muiTheme.palette.divider}`,
+                            backgroundColor: 'rgba(139, 92, 246, 0.05)',
                         }}
                     >
 
@@ -248,7 +283,7 @@ function UsersPage() {
                             variant="h6"
                             sx={{
                                 fontWeight: 600,
-                                color: '#18181b',
+                                color: muiTheme.palette.text.primary,
                             }}
                         >
                             User List

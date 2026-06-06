@@ -1,12 +1,14 @@
 import React from 'react';
 import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
+import { useTheme as useMuiTheme } from '@mui/material/styles';
 import { LineChart, ScatterChart, RadarChart } from '@mui/x-charts';
 
 function ReportsPage() {
+    const muiTheme = useMuiTheme();
     return (
         <Box sx={{ width: '100%', maxWidth: '100%', overflow: 'hidden' }}>
             <Box sx={{ mb: 4 }}>
-                <Typography variant="h4" sx={{ fontWeight: 700, color: '#111827', mb: 1 }}>
+                <Typography variant="h4" sx={{ fontWeight: 700, color: muiTheme.palette.text.primary, mb: 1 }}>
                     Reports
                 </Typography>
             </Box>
@@ -16,12 +18,13 @@ function ReportsPage() {
                 {/* Revenue Trend */}
                 <Card sx={{
                     flex: 1.4,
-                    borderRadius: 4,
-                    border: '1px solid #ececec',
-                    boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+                    borderRadius: 2,
+                    backgroundColor: muiTheme.palette.background.paper,
+                    border: `1px solid ${muiTheme.palette.divider}`,
+                    boxShadow: 'none',
                 }}>
                     <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
-                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 3, color: '#18181b' }}>
+                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 3, color: muiTheme.palette.text.primary }}>
                             Revenue Trend
                         </Typography>
 
@@ -36,7 +39,7 @@ function ReportsPage() {
                                 width={380}
                                 series={[{
                                     data: [12, 18, 15, 24, 30, 38],
-                                    color: '#64748b',
+                                    color: '#8b5cf6',
                                     area: true,
                                 }]}
                                 xAxis={[{
@@ -51,12 +54,13 @@ function ReportsPage() {
                 {/* Team Performance */}
                 <Card sx={{
                     flex: 1,
-                    borderRadius: 4,
-                    border: '1px solid #ececec',
-                    boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+                    borderRadius: 2,
+                    backgroundColor: muiTheme.palette.background.paper,
+                    border: `1px solid ${muiTheme.palette.divider}`,
+                    boxShadow: 'none',
                 }}>
                     <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
-                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: '#18181b' }}>
+                        <Typography variant="h6" sx={{ fontWeight: 600, mb: 2, color: muiTheme.palette.text.primary }}>
                             Team Performance
                         </Typography>
                         <Box sx={{
@@ -72,7 +76,7 @@ function ReportsPage() {
                                 series={[{
                                     label: 'Performance',
                                     data: [80, 65, 75, 90, 70],
-                                    color: '#94a3b8',
+                                    color: '#8b5cf6',
                                 }]}
                                 radar={{
                                     metrics: [
@@ -98,14 +102,15 @@ function ReportsPage() {
 
             {/* Scatter Analytics */}
             <Card sx={{
-                borderRadius: 4,
-                border: '1px solid #ececec',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.03)',
+                borderRadius: 2,
+                backgroundColor: muiTheme.palette.background.paper,
+                border: `1px solid ${muiTheme.palette.divider}`,
+                boxShadow: 'none',
                 mb: 5,
             }}>
                 <CardContent sx={{ p: { xs: 2, sm: 3 } }}>
 
-                    <Typography variant="h6" sx={{ fontWeight: 600, mb: 3, color: '#18181b' }}>
+                    <Typography variant="h6" sx={{ fontWeight: 600, mb: 3, color: muiTheme.palette.text.primary }}>
                         User Activity Distribution
                     </Typography>
 
@@ -120,7 +125,7 @@ function ReportsPage() {
                             width={700}
                             series={[{
                                 label: 'Activity',
-                                color: '#64748b',
+                                color: '#8b5cf6',
                                 data: [
                                     { x: 5, y: 20, id: 1 },
                                     { x: 10, y: 35, id: 2 },

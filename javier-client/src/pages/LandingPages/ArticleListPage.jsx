@@ -11,12 +11,11 @@ const ArticleListPage = () => {
                     Dev Notes
                 </p>
                 <h1 className="max-w-xl text-3xl font-bold leading-tight text-zinc-900 sm:text-4xl">
-                    Developer Thoughts, Tutorials, and Occasional Chaos
+                    Coding Stories, Lessons, and Unexpected Wins
                 </h1>
                 <p className="mt-4 max-w-lg text-sm leading-7 text-zinc-600 sm:text-base">
-                    A mix of coding tutorials, developer experiences,
-                    debugging adventures, and moments where everything
-                    finally worked for no reason.
+                    Real developer stories from the front lines: quick tutorials, debugging
+                    lessons, and the rare moments when the app finally runs perfectly.
                 </p>
                 <div className="mt-6">
                     <Button to="/">Back Home</Button>
