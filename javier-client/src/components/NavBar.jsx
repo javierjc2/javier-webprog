@@ -27,7 +27,7 @@ const NavBar = () => {
                     <div className="space-y-0.5">
                         <img
                             src="/logo.png"
-                            alt="C&R Logo"
+                            alt="Logo"
                             className="h-10 w-auto object-contain"
                         />
                     </div>
