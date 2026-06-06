@@ -32,7 +32,7 @@ const HomePage = () => {
                     </div>
                     <div className="flex items-center justify-center">
                         <img
-                            src="/src/assets/img/picture about.png"
+                            src="/picture about.png"
                             alt="Profile Picture"
                             className="w-72 h-72 object-cover rounded-full border-4 border-black shadow-md"
                         />
@@ -95,7 +95,7 @@ const HomePage = () => {
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
                         <div className="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] bg-zinc-200">
                             <img
-                                src="src/assets/img/AuditSure.png"
+                                src="/AuditSure.png"
                                 alt="Simple Product Catalog"
                                 className="h-full w-full object-cover"
                             />
@@ -119,7 +119,7 @@ const HomePage = () => {
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
                         <div className="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] bg-zinc-200">
                             <img
-                                src="src/assets/img/Social Media Flutter.png"
+                                src="/Social Media Flutter.png"
                                 alt="Simple Product Catalog"
                                 className="h-full w-full object-cover"
                             />
@@ -142,7 +142,7 @@ const HomePage = () => {
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
                         <div className="flex aspect-[4/3] items-center justify-center rounded-[1.25rem] bg-zinc-200">
                             <img
-                                src="src/assets/img/Bull Ex Web App.png"
+                                src="/Bull Ex Web App.png"
                                 alt="Simple Product Catalog"
                                 className="h-full w-full object-cover"
                             />
