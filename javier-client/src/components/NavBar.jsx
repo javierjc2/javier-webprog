@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { FaHome, FaUser, FaNewspaper } from "react-icons/fa";
+import logo from '../../assets/img/logo.png';
 
 const links = [
     { label: <FaHome />, to: "/" },
@@ -26,7 +27,7 @@ const NavBar = () => {
 
                     <div className="space-y-0.5">
                         <img
-                            src="/src/assets/img/logo.png"
+                            src={logo}
                             alt="C&R Logo"
                             className="h-10 w-auto object-contain"
                         />
