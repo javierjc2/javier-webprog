@@ -12,19 +12,23 @@ const app = express();
 connectDB();
 
 // ── CORS ──────────────────────────────────────────────────────────────────────
-// Allow all origins in dev; in production Vercel injects the real frontend URL.
 const corsOptions = {
-    origin: process.env.ALLOWED_ORIGIN
-        ? process.env.ALLOWED_ORIGIN.split(',')
-        : '*',
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
-    optionsSuccessStatus: 204,
+  origin: '*',
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+  preflightContinue: false,
+  optionsSuccessStatus: 204,
 };
-
 app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  next();
+});
 
 // ── Body parsing ──────────────────────────────────────────────────────────────
 app.use(express.json());
@@ -40,14 +44,14 @@ app.use((req, res) => res.status(404).json({ message: 'Route not found' }));
 
 // ── Global error handler ──────────────────────────────────────────────────────
 app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({ message: 'Server Error', error: err.message });
+  console.error(err.stack);
+  res.status(500).json({ message: 'Server Error', error: err.message });
 });
 
-// ── Listen (skipped on Vercel – it uses the exported app) ────────────────────
-const PORT = process.env.PORT || 8000;
-if (process.env.NODE_ENV !== 'test') {
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// ── Listen only in local dev (Vercel uses the exported app) ──────────────────
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 8000;
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
 
 module.exports = app;

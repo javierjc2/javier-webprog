@@ -87,13 +87,6 @@ const loginUser = async (req, res) => {
             return res.status(404).json({ message: 'No account found with that email address.' });
         }
 
-        // Enhancement 1: Viewers cannot log in
-        if (user.role === 'viewer') {
-            return res.status(403).json({
-                message: 'Viewer accounts are not permitted to access the dashboard.',
-            });
-        }
-
         if (!user.isActive) {
             return res.status(403).json({
                 message: 'Your account is inactive. Please contact an administrator.',
