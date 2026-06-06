@@ -10,7 +10,7 @@ const AboutPage = () => {
                 <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
                     <div className="flex items-center justify-center">
                         <img
-                            src="/src/assets/img/picture-about.png"
+                            src="/picture-about.png"
                             alt="Profile Picture"
                             className="w-72 h-72 object-cover rounded-full border-4 border-black shadow-md"
                         />
@@ -141,34 +141,30 @@ const AboutPage = () => {
                             Visual Grid
                         </p>
                         <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                            <div className="flex aspect-square items-center justify-
-                            center rounded-[1.25rem] bg-zinc-200">
+                            <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/IT2.png"
+                                    src="/IT2.png"
                                     alt="IT2"
                                     className="h-full w-full object-cover"
                                 />
                             </div>
-                            <div className="flex aspect-square items-center justify-
-                            center rounded-[1.25rem] bg-zinc-200">
+                            <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/IT1.png"
+                                    src="/IT1.png"
                                     alt="IT1"
                                     className="h-full w-full object-cover"
                                 />
                             </div>
-                            <div className="flex aspect-square items-center justify-
-                            center rounded-[1.25rem] bg-zinc-200">
+                            <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/IT3.png"
+                                    src="/IT3.png"
                                     alt="IT3"
                                     className="h-full w-full object-cover"
                                 />
                             </div>
-                            <div className="flex aspect-square items-center justify-
-                            center rounded-[1.25rem] bg-zinc-200">
+                            <div className="flex aspect-square items-center justify-center rounded-[1.25rem] bg-zinc-200">
                                 <img
-                                    src="src/assets/img/IT4.png"
+                                    src="/IT4.png"
                                     alt="IT4"
                                     className="h-full w-full object-cover"
                                 />
