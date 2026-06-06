@@ -1,6 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { FaHome, FaUser, FaNewspaper } from "react-icons/fa";
-import logo from '../../assets/img/logo.png';
 
 const staticLinks = [
     { label: <FaHome />, to: "/" },
@@ -37,7 +36,7 @@ const NavBar = () => {
                 <NavLink to="/" className="flex items-center gap-3">
                     <div className="space-y-0.5">
                         <img
-                            src={logo}
+                            src="/src/assets/img/logo.png"
                             alt="C&R Logo"
                             className="h-10 w-auto object-contain"
                         />

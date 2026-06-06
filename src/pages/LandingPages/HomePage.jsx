@@ -1,5 +1,4 @@
 import Button from '../../components/Button';
-import profilePicture from '../../assets/img/picture-about.png';
 
 const HomePage = () => {
     return (
@@ -33,7 +32,7 @@ const HomePage = () => {
                     </div>
                     <div className="flex items-center justify-center">
                         <img
-                            src={profilePicture}
+                            src="/src/assets/img/picture about.png"
                             alt="Profile Picture"
                             className="w-72 h-72 object-cover rounded-full border-4 border-black shadow-md"
                         />
